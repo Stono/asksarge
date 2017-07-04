@@ -36,10 +36,13 @@ const findBestMatch = (db, entities) => {
 };
 let numbers = require('./data/numbers');
 let powers = require('./data/powers');
+let definitions = require('./data/definitions');
 mergeDataTags(numbers);
 mergeDataTags(powers);
+mergeDataTags(definitions);
 let db = numbers.entities;
 db.push.apply(db, powers.entities);
+db.push.apply(db, definitions.entities);
 
 const answer = function(question, done) {
   google.getEntities(question, (err, entities) => {

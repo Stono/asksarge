@@ -1,0 +1,8 @@
+  - Grounds
+  - Object of search
+  - Warrant Card
+  - Identity of Officer
+  - Station attached to
+  - Entitlement to copy of the search record
+  - Legal power used
+  - You are detained for the purpose of a search

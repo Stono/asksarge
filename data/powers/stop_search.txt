@@ -15,13 +15,4 @@ Objects of a search – the constable can search for:
     - prohibited fireworks
     - bladed or sharp pointed articles i.e. knives
 
-[GOWISELY]
-
-  - Grounds
-  - Object of search
-  - Warrant Card
-  - Identity of Officer
-  - Station attached to
-  - Entitlement to copy of the search record
-  - Legal power used
-  - You are detained for the purpose of a search
+As me about GOWISELY.
