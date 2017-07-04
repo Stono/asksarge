@@ -12,9 +12,11 @@ describe('Sanitiser', () => {
     ['section 117', 'section117'],
     ['Section 117', 'section117']
   ].forEach(testCase => {
-    it(`${testCase[0]} should convert to ${testCase[1]}`, () => {
-      const result = sanitiser.clean(testCase[0]);
-      should(result).eql(testCase[1]);
+    it(`${testCase[0]} should convert to ${testCase[1]}`, done => {
+      sanitiser.clean(testCase[0], (err, result) => {
+        should(result).eql(testCase[1]);
+        done();
+      });
     });
   });
 });
