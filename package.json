@@ -19,11 +19,14 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "test": "./node_modules/grunt/bin/grunt mochaTest"
+    "test": "./node_modules/grunt/bin/grunt mochaTest",
+    "start": "node cli.js"
   },
   "dependencies": {
     "@google-cloud/language": "0.10.5",
     "@google-cloud/storage": "1.1.1",
+    "async": "^2.5.0",
+    "debug": "^2.6.8",
     "glob": "^7.1.2",
     "yargs": "8.0.2"
   },
