@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  web:
+    image: stono/asksarge
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8999:8999
