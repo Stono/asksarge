@@ -63,7 +63,7 @@ var go = function() {
       text: question
     });
     $('.commentArea').scrollTop($('.commentArea')[0].scrollHeight);
-    this.lastseen('The Boss is typing a message...');
+    this.lastseen('Sarge is typing a message...');
     this.question(null);
   };
 
