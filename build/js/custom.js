@@ -69,10 +69,7 @@ var go = function() {
 
   ko.applyBindings(viewModel, document.getElementById('chat'));
 
-  socket.on('connect', function() {
-    console.log('connected');
-  })
-  .on('error', function(err) {
+  socket.on('error', function(err) {
     console.log(err);
   })
   .on('message', viewModel.addReply);
