@@ -34,6 +34,7 @@ const findBestMatch = (db, entities) => {
     return (a.score < b.score);
   });
 };
+
 let numbers = require('./data/numbers');
 let powers = require('./data/powers');
 let definitions = require('./data/definitions');
@@ -44,7 +45,18 @@ let db = numbers.entities;
 db.push.apply(db, powers.entities);
 db.push.apply(db, definitions.entities);
 
+const commonReplacements = question => {
+  const replace = {
+    define: 'definition'
+  };
+  Object.keys(replace).forEach(key => {
+    question = question.replace(key, replace[key]);
+  });
+  return question;
+};
+
 const answer = function(question, done) {
+  question = commonReplacements(question);
   google.getEntities(question, (err, entities) => {
     entities = splitEntitiesIntoWords(entities);
     const results = findBestMatch(db, entities);

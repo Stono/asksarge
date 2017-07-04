@@ -24,6 +24,7 @@
   "dependencies": {
     "@google-cloud/language": "0.10.5",
     "@google-cloud/storage": "1.1.1",
+    "glob": "^7.1.2",
     "yargs": "8.0.2"
   },
   "devDependencies": {
