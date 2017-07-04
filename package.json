@@ -20,22 +20,32 @@
   },
   "scripts": {
     "test": "./node_modules/grunt/bin/grunt mochaTest",
-    "start": "node cli.js"
+    "assets": "./node_modules/grunt/bin/grunt assets",
+    "start": "DEBUG=ig:* node server.js"
   },
   "dependencies": {
     "@google-cloud/language": "0.10.5",
     "@google-cloud/storage": "1.1.1",
     "async": "^2.5.0",
+    "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
+    "express": "4.15.3",
+    "express-session": "^1.15.3",
     "glob": "^7.1.2",
+    "ioredis": "3.1.1",
+    "pug": "2.0.0-rc.2",
+    "socket.io": "2.0.3",
     "yargs": "8.0.2"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.15",
     "ava": "0.20.0",
     "colors": "^1.1.2",
+    "deride": "^1.1.0",
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-uglify": "3.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-mocha-istanbul": "^5.0.2",
     "grunt-mocha-test": "^0.13.2",

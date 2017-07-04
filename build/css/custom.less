@@ -1,0 +1,166 @@
+html {
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  position:relative;
+}
+
+body {
+  background-color: lightgrey;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.profile-picture {
+  float: left;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('/images/car.jpg');
+  margin-right: 15px;
+}
+
+.profile > .info {
+  padding-top: 2px;
+  margin-left: 87px;
+  color: #3a3a3a;
+}
+.profile > .name {
+  font-weight: bold;
+  font-size: 1.8em;
+  padding-top: 14px;
+  color: #3a3a3a;
+}
+
+input {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+}
+input:focus{
+  outline: none;
+}
+
+.container {
+  font: 14px Arial;
+  padding: 0 0px;
+  margin-top: 0px;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+}
+
+.header {
+  background-color: #e6e6e6;
+  height: 78px;
+  position:relative;
+  width: 100%;
+}
+
+.commentArea {
+  height: 100%;
+  overflow: scroll;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  display: block;
+  position:absolute;
+  height:auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  margin: 80px 30px 60px 0;
+}
+
+.footer {
+  background-color: #e6e6e6;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 33px 10px 10px;
+}
+
+
+.bubbledLeft,.bubbledRight {
+  margin-top: 20px;
+  padding: 5px 9px;
+  max-width: 80%;
+  clear: both;
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.bubbledLeft:first-child {
+  margin-top: 10px;
+}
+
+.bubbledLeft{
+  float: left;
+  margin-right: auto;
+  -webkit-border-radius: 8px 8px 8px 0px;
+  -moz-border-radius: 8px 8px 8px 0px;
+  -o-border-radius: 8px 8px 8px 0px;
+  -ms-border-radius: 8px 8px 8px 0px;
+  border-radius: 8px 8px 8px 0px;
+  background-color: #91a788;
+  color: #ffffff;
+
+  -moz-box-shadow: 2px 2px 5px #c5c5c5;
+  -webkit-box-shadow: 2px 2px 5px #c5c5c5;
+  box-shadow: 2px 2px 5px #c5c5c5;
+}
+
+.bubbledLeft:before {
+  border-bottom: 10px solid #91a788;
+  border-left: 9px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  content: "";
+}
+
+.bubbledRight{
+  float: right;
+  margin-left: auto;
+  text-align: right;
+  -webkit-border-radius: 8px 8px 0px 8px;
+  -moz-border-radius: 8px 8px 0px 8px;
+  -o-border-radius: 8px 8px 0px 8px;
+  -ms-border-radius: 8px 8px 0px 8px;
+  border-radius: 8px 8px 0px 8px;
+  background-color: #4ca7f5;
+  color: white;
+  -moz-box-shadow: -2px 2px 5px #c5c5c5;
+  -webkit-box-shadow: -2px 2px 5px #c5c5c5;
+  box-shadow: -2px 2px 5px #c5c5c5;
+}
+
+.bubbledRight:before {
+  border-bottom: 9px solid #4ca7f5;
+  border-right: 9px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+  content: "";
+}
+
+a {
+  color: white;
+}

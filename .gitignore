@@ -15,3 +15,8 @@ coverage/
 checkstyle-result.xml
 coverage.*
 junit.xml
+public
+scanLogs
+.env
+test-*
+account.json

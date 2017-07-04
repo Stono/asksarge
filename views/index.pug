@@ -1,0 +1,16 @@
+extend layout
+block header
+block content
+  .container#chat
+    .header
+      .profile-picture
+      .profile
+        .name Sarge
+        .info(data-bind='text: lastseen')
+
+    .commentArea(data-bind='foreach: messages')
+      .div(data-bind='css: css, html: text')
+
+    .footer
+      input(type='text', placeholder='Type here...', data-bind='value: question, valueUpdate: "keyup", enterkey: addQuestion')
+block javascript
