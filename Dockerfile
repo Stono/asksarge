@@ -19,7 +19,7 @@ RUN yum -y -q update && \
 RUN mkdir -p /app
 WORKDIR /app
 EXPOSE 8999
-CMD ["npm", "run", "web"]
+CMD ["npm", "run", "start"]
 
 COPY package.json /app
 
