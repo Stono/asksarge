@@ -20,4 +20,4 @@ after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker pull stono/asksarge
   - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
-  - docker push stono/asksarge.ninja
+  - docker push stono/asksarge
