@@ -1,18 +1,18 @@
 {
-  "name": "inspector-gadget",
+  "name": "asksarge",
   "description": "A natural language bot to help out constables",
   "version": "0.1.0",
-  "homepage": "https://github.com/Stono/inspector-gadget",
+  "homepage": "https://github.com/Stono/asksarge",
   "author": {
     "name": "Karl Stoney",
     "email": "me@karlstoney.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Stono/inspector-gadget.git"
+    "url": "git://github.com/Stono/asksarge.git"
   },
   "bugs": {
-    "url": "https://github.com/Stono/inspector-gadget/issues"
+    "url": "https://github.com/Stono/asksarge/issues"
   },
   "main": "index.js",
   "engines": {
