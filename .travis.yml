@@ -1,0 +1,23 @@
+sudo: required
+
+services:
+  - docker
+
+language: node_js
+
+node_js:
+  - 8
+
+notifications:
+  email: false
+
+branches:
+  only:
+    - master
+
+after_success:
+  - sudo apt-get update && sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker pull stono/asksarge
+  - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
+  - docker push stono/asksarge.ninja
