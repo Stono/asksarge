@@ -27,6 +27,7 @@
     "@google-cloud/language": "0.10.5",
     "@google-cloud/storage": "1.1.1",
     "async": "^2.5.0",
+    "basicauth-middleware": "^2.0.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
     "express": "4.15.3",
