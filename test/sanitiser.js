@@ -10,7 +10,7 @@ describe('Sanitiser', () => {
 
   [
     ['section 117', 'section117'],
-    ['Section 117', 'section117'],
+    ['Section 117', 'Section117'],
     ['define gowisely', 'definition of gowisely'],
     ['stop & search', 'stop and search']
   ].forEach(testCase => {
