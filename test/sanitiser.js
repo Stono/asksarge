@@ -11,8 +11,8 @@ describe('Sanitiser', () => {
   [
     ['section 117', 'section117'],
     ['Section 117', 'section117'],
-    ['do we like questions?', 'do we like questions'],
-    ['define gowisely', 'definition of gowisely']
+    ['define gowisely', 'definition of gowisely'],
+    ['stop & search', 'stop and search']
   ].forEach(testCase => {
     it(`${testCase[0]} should convert to ${testCase[1]}`, done => {
       sanitiser.clean(testCase[0], (err, result) => {
