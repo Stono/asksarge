@@ -13,11 +13,12 @@ branches:
     - master
 
 before_script:
+  - sudo sysctl -w vm.max_map_count=262144
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker-compose pull elasticsearch web
   - docker-compose up -d elasticsearch
   - docker-compose logs --follow elasticsearch
-  - wget -q --waitretry=1 --retry-connrefused -T 30 -O - http://127.0.0.1:9200
+  - docker-compose exec elasticsearch wget -q --waitretry=1 --retry-connrefused -T 30 -O - http://127.0.0.1:9200
 
 script:
   - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
