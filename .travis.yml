@@ -5,9 +5,6 @@ services:
 
 language: bash
 
-node_js:
-  - 8
-
 notifications:
   email: false
 
@@ -19,7 +16,8 @@ before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker-compose pull elasticsearch web
   - docker-compose up -d elasticsearch
-  - docker-compose logs --follow elasticsearch &
+  - docker-compose logs --follow elasticsearch
+  - wget -q --waitretry=1 --retry-connrefused -T 30 -O - http://127.0.0.1:9200
 
 script:
   - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
