@@ -18,8 +18,7 @@ branches:
 before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker-compose pull
-  - docker-compose up -d elasticsearch
-  - wget -q --waitretry=1 --retry-connrefused -T 10 -O - http://127.0.0.1:9200
+  - sleep 5
 
 script:
   - docker-compose run --rm web npm run test
