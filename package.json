@@ -19,9 +19,11 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "test": "./node_modules/grunt/bin/grunt mochaTest",
+    "test": "DEBUG=ig:* ./node_modules/grunt/bin/grunt mochaTest",
+    "watch": "DEBUG=ig:* ./node_modules/grunt/bin/grunt watch",
     "assets": "./node_modules/grunt/bin/grunt assets",
-    "start": "DEBUG=ig:* node server.js"
+    "start": "DEBUG=ig:* node server.js",
+    "populate": "DEBUG=ig:* node populate.js"
   },
   "dependencies": {
     "@google-cloud/language": "0.10.5",

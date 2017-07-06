@@ -37,8 +37,12 @@ describe('Data', () => {
     });
 
     describe('find by tags', () => {
+      before(done => {
+        data.populateElasticsearch(done);
+      });
       it('should not return items with no matching tags', done => {
         data.matchByTags(['akwjndkajwdnkajwndk'], (err, results) => {
+          should.ifError(err);
           should(results.length).eql(0);
           done();
         });
@@ -46,6 +50,7 @@ describe('Data', () => {
 
       it('should score two points for a matching term in tags', done => {
         data.matchByTags(['section19'], (err, results) => {
+          should.ifError(err);
           should(results[0].name).match(/section 19/i);
           should(results[0].score).eql(2);
           done();
@@ -54,6 +59,7 @@ describe('Data', () => {
 
       it('should score one points for a matching term in title', done => {
         data.matchByTags(['General'], (err, results) => {
+          should.ifError(err);
           should(results[0].name).match(/section 19/i);
           should(results[0].score).eql(1);
           done();
