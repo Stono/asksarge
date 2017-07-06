@@ -5,7 +5,6 @@ const Data = require('../lib/data');
 describe('Data', () => {
   let data = new Data();
   data.loadDataFromFiles(() => {
-
     const expectedTypes = {
       definitions: 2,
       powers: 11,
@@ -43,15 +42,19 @@ describe('Data', () => {
           done();
         });
       });
-      it('should score items as what percentage of their tags match the query', done => {
-        data.addData({
-          name: 'test',
-          tags: ['some', 'other', 'tags', 'akwjndkajwdnkajwndk'],
-          data: 'testing'
+
+      it('should score two points for a matching term in tags', done => {
+        data.matchByTags(['section19'], (err, results) => {
+          should(results[0].name).match(/section 19/i);
+          should(results[0].score).eql(2);
+          done();
         });
-        data.matchByTags(['akwjndkajwdnkajwndk'], (err, results) => {
-          should(results[0].name).eql('test');
-          should(results[0].score).eql(25);
+      });
+
+      it('should score one points for a matching term in title', done => {
+        data.matchByTags(['General'], (err, results) => {
+          should(results[0].name).match(/section 19/i);
+          should(results[0].score).eql(1);
           done();
         });
       });

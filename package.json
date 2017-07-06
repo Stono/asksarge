@@ -30,12 +30,14 @@
     "basicauth-middleware": "^2.0.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
+    "elasticsearch": "^13.2.0",
     "express": "4.15.3",
     "express-session": "^1.15.3",
     "glob": "^7.1.2",
     "ioredis": "3.1.1",
     "pug": "2.0.0-rc.2",
     "socket.io": "2.0.3",
+    "uuid": "^3.1.0",
     "yargs": "8.0.2"
   },
   "devDependencies": {
