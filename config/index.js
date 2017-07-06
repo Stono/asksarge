@@ -1,5 +1,6 @@
 'use strict';
 module.exports = {
   port: 8999,
-  name: 'Inspector Gadget'
+  elasticsearch: process.env.ELASTICSEARCH_HOST || 'localhost',
+  name: 'Sarge'
 };

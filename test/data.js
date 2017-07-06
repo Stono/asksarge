@@ -1,9 +1,10 @@
 'use strict';
 const should = require('should');
 const Data = require('../lib/data');
+const config = require('../config');
 
 describe('Data', () => {
-  let data = new Data();
+  let data = new Data(config);
   data.loadDataFromFiles(() => {
     const expectedTypes = {
       definitions: 2,
