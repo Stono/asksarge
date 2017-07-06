@@ -19,6 +19,7 @@ before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker-compose pull elasticsearch web
   - docker-compose up -d elasticsearch
+  - docker-compose logs --follow elasticsearch &
 
 script:
   - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
