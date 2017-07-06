@@ -18,6 +18,7 @@ branches:
 before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker-compose pull elasticsearch web
+  - docker-compose up -d elasticsearch
   - sleep 5
 
 script:
