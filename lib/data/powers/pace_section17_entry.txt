@@ -7,4 +7,4 @@ At a high level, a constable may enter and search premises for the following pur
   - Statutory offences e.g. POA, Drink Drive, Fail to stop
   - Executing a warrant
 
-For more detailed information, you may want to look at: http://www.legislation.gov.uk/ukpga/1984/60/section/17
+http://www.legislation.gov.uk/ukpga/1984/60/section/17

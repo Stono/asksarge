@@ -8,7 +8,7 @@ describe('Data', () => {
 
     const expectedTypes = {
       definitions: 2,
-      powers: 4,
+      powers: 11,
       numbers: 3
     };
 

@@ -1,0 +1,11 @@
+A constable may seize anything which is on the premises if he/she has reasonable grounds for believing that it has been obtained in the commission of an offence, or that it is evidence in relation to an offence which he/she is investigating or any other offence and that it is necessary to seize it in order to prevent it being:
+
+  - Concealed
+  - Lost
+  - Altered
+  - Damaged
+  - Destroyed
+
+Sec 19 does not allow you to seize items reference legal privilege.
+
+http://www.legislation.gov.uk/ukpga/1984/60/section/19
