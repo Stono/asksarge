@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 
-language: node_js
+language: bash
 
 node_js:
   - 8
@@ -15,15 +15,14 @@ branches:
   only:
     - master
 
-script:
-  - sudo apt-get update && sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker pull stono/asksarge
-  - docker build -f Dockerfile -t stono/asksarge --cache-from stono/asksarge .
+  - docker-compose pull
   - docker-compose up -d elasticsearch
   - wget -q --waitretry=1 --retry-connrefused -T 10 -O - http://127.0.0.1:9200
-  - docker-compose build web
-  - docker-compose run --rm -it npm run test
+
+script:
+  - docker-compose run --rm web npm run test
 
 after_success:
   - docker push stono/asksarge

@@ -8,6 +8,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    depends_on:
+      - elasticsearch
     ports:
       - 8999:8999
 
